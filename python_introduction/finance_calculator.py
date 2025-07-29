@@ -1,18 +1,19 @@
 # finance_calculator.py
 
-# Prompt user for monthly income
+# Prompt user for monthly income and expenses
 income = float(input("Enter your monthly income: "))
-
-# Prompt user for monthly expenses
 expenses = float(input("Enter your total monthly expenses: "))
 
 # Calculate monthly savings
 monthly_savings = income - expenses
 
-# Calculate projected annual savings with 5% interest
-annual_savings = monthly_savings * 12
-interest = annual_savings * 0.05
-projected_savings = annual_savings + interest
+# Annual interest rate and monthly rate
+annual_rate = 0.05
+monthly_rate = annual_rate / 12
+months = 12
+
+# Compound interest formula for monthly deposits
+projected_savings = monthly_savings * (((1 + monthly_rate) ** months - 1) / monthly_rate)
 
 # Output results
 print(f"Your monthly savings are ${monthly_savings:.2f}.")

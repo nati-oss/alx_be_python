@@ -1,15 +1,13 @@
-number1=10
-number2=5
+# Define the two numbers
+number1 = 10
+number2 = 5
 
-sum = number1 + number2
-differnce = number1 - number2
-product = number1 * number2
+# Perform arithmetic operations
+addition = number1 + number2
+subtraction = number1 - number2
+multiplication = number1 * number2
 
-print(f"sum of {number1} and {number2} is " + str(sum))
-print(f"differnce of {number1} and {number2} is " + str(differnce))
-<<<<<<< HEAD
-print(f"product of {number1} and {number2} is " + str(product))
-#end
-=======
-print(f"product of {number1} and {number2} is " + str(product))
->>>>>>> 382926b29571e2d69099aa2a5b28e79244e57d64
+# Print the results
+print(f"Addition of {number1} and {number2} is {addition}")
+print(f"Subtraction of {number1} and {number2} is {subtraction}")
+print(f"Multiplication of {number1} and {number2} is {multiplication}")
