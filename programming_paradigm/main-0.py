@@ -1,8 +1,9 @@
- 
-# main-0.py
-
 import sys
 from bank_account import BankAccount
+
+def format_amount(amount):
+    # Format amount without decimals if whole number, else keep decimals
+    return str(int(amount)) if amount == int(amount) else str(amount)
 
 def main():
     account = BankAccount(100)  # Starting balance
@@ -17,10 +18,10 @@ def main():
 
     if command == "deposit" and amount is not None:
         account.deposit(amount)
-        print(f"Deposited: ${amount}")
+        print(f"Deposited: ${format_amount(amount)}")
     elif command == "withdraw" and amount is not None:
         if account.withdraw(amount):
-            print(f"Withdrew: ${amount}")
+            print(f"Withdrew: ${format_amount(amount)}")
         else:
             print("Insufficient funds.")
     elif command == "display":
@@ -30,4 +31,3 @@ def main():
 
 if __name__ == "__main__":
     main()
- 
